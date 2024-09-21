@@ -14,3 +14,87 @@
 //   color: var.$primary-color;
 //   text-align: center;
 // }
+
+.container { 
+    max-width: 50rem;
+    margin: 0 auto;
+    border-style: double;
+    border-color: #798281;
+  }
+
+body {
+    font-family: Neuton;
+    background-color: #262d34;
+    color: #c5c2b7;
+    font-size: clamp(1.5rem, 2.5vw, .5rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: clamp(2rem, 2.5vw, 5rem);
+    line-height: 1.1;
+    font-family: 'Courier New', Courier, monospace;
+   padding: 10px;
+ 
+}
+
+
+/*I previously accomplished this in WEB Dev 1, so I would be making minor changes to the code*/
+/*Adding grid to start making the hover effect*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 99%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hover effect styling */
+
+  .img-wrapper > .content {
+    position: absolute;
+    inset: 0;
+    font-size: clamp(1.5rem, 2.5vw, 1rem);
+    padding: 1rem;
+    background: rgb(71, 80, 87, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Creating transition speed*/
+
+  .img-wrapper > img,
+  .img-wrapper > .content {
+    transition: 200ms ease-in-out;
+  }
+  /* Styling the hover*/
+  .img-wrapper:hover > img.blur {
+    filter: blur(5px);
+  }
+  
+  .img-wrapper:hover > img.zoom {
+    transform: scale(1.1);
+  }
+
+  /* Changes in fading while hovering over the image*/
+  .img-wrapper > .content.fade {
+    opacity: 0;
+  }
+  .img-wrapper:hover > .content.fade {
+    opacity: 1;
+  }
+
+  body {
+    margin: 0;
+    width: 90vw;
+    height: 90vh;
+}
