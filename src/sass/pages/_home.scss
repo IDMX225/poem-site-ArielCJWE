@@ -20,6 +20,7 @@
     margin: auto;
     border-style: double;
     border-color: #798281;
+    border-radius: 45px;
   }
 
 body {
@@ -30,16 +31,14 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     padding: 10px;
     text-align: center;
+    text-size-adjust: 25px;
 }
 
 h1, h2 {
     font-size: clamp(2rem, 2.5vw, 5rem);
     line-height: 1.1;
     font-family: 'Courier New', Courier, monospace;
-   padding: 10px;
- 
-}
-
+   padding: 10px;}
 
 /*I previously accomplished this in WEB Dev 1, so I would be making minor changes to the code*/
 /*Adding grid to start making the hover effect*/
@@ -55,6 +54,7 @@ h1, h2 {
   .img-wrapper {
     position: relative;
     overflow: hidden;
+    border-radius: 95px;
   }
 
   /* Hover effect styling */
